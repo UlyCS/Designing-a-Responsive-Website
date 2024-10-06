@@ -1,0 +1,524 @@
+/* Basic css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@font-face { 
+    font-family: 'ProximaNovaLight'; 
+    src: 
+        url('/fonts/proxima-nova-light.otf')  
+        format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+
+@font-face { 
+    font-family: 'ProximaNovaRegular'; 
+    src: 
+        url('/fonts/proxima-nova.otf')  
+        format('opentype'); 
+    font-weight: normal; 
+    font-style: normal; 
+} 
+
+body {
+    font-family: 'ProximaNovaLight', Arial, sans-serif;
+    color: #9f7163;
+    line-height: 1.3;
+    background-color: #ffffff;
+}
+
+/* main {
+    max-width: 926px; 
+    margin: 0 auto;
+    padding: 20px;
+} */
+
+
+/* Global Font Settings */
+h1, h2, h3 {
+    font-family: 'ProximaNovaRegular', Arial, sans-serif;
+    font-weight: 700; 
+}
+
+p {
+    font-family: 'ProximaNovaRegular', Arial, sans-serif;
+}
+
+/* Fix alignment and layout */
+.hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #9f7163;
+}
+
+nav a {
+    color: #cdb5a2;
+    font-family: 'ProximaNovaRegular', Arial, sans-serif;
+    font-size: 8.8pt;
+    /* font-size: 1rem; */
+}
+
+
+/* Header */
+
+header {
+    margin: 0;
+    padding: 0;
+    border-top: 50px solid #bb8888; /*  top-bar  */
+}
+
+
+.logo{
+    width: 100%; 
+    height: auto; 
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center; 
+}
+
+.logo-image{
+    width: 50px; 
+    height: 80px; 
+    object-fit: contain; 
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+/* Hero Section */
+.hero {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+    max-width: 1500px;
+    margin: 0 auto;
+    gap: 50px; 
+}
+
+.hero-background {
+    position: absolute;
+    top: 380px; /* background position */
+    left: 0;
+    width: 100%;
+    height: 300px; 
+    background-color: #cdb5a2; 
+    z-index: -1; /* Set to behind content */
+}
+
+.hero-left {
+    width: 55%;
+    position: relative;
+    padding-right: 20px;
+}
+
+.hero-image {
+    width: 100%;
+    height: auto;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3); 
+}
+
+.hero-text {
+    margin-top: 20px; 
+    line-height: 1.7;
+    color: #aa7766;;
+    background-color: rgba(255, 255, 255, 0.9); /* Semi-transparent white background for mobile responsiveness*/
+    padding: 15px;
+}
+
+.hero-text p {
+    /* font-size: 9.08pt; */
+    font-family: 'ProximaNovaLight', Arial, sans-serif;
+    font-size: 1rem;
+    margin-bottom: 15px;
+}
+
+.hero-right {
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.subscribe-box {
+    background: url('images/form-bg.png') no-repeat center center; 
+    background-color: white;
+    background-size: cover;
+    padding: 60px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+}
+
+.subscribe-text {
+    font-weight: 700;
+    color: #9f7163;
+    font-size: 1rem;
+    text-align: start;
+    margin-bottom: 30px;
+}
+
+.subscribe-box form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.subscribe-box input[type="email"] {
+    width: 100%;
+    padding: 20px 10px;
+    background-color: #d9b5a8;
+    margin-bottom: 25px;
+    font-family: 'ProximaNovaLight', Arial, sans-serif;
+}
+
+.subscribe-box input::placeholder {
+    color: white;
+    font-weight: 700;
+}
+
+.subscribe-box button {
+    width: 100%;
+    padding: 20px 20px;
+    background-color: #9f7163;
+    color: white;
+    font-size: 20px;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+    font-family: 'ProximaNovaLight', Arial, sans-serif;
+}
+
+.subscribe-box form button:hover {
+    background-color: #b47878;
+    font-family: 'ProximaNovaLight', Arial, sans-serif;
+}
+
+/* Latest Section */
+.latest {
+    text-align: center;
+    padding: 10px 0;
+}
+
+.latest h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: bold;
+    color: #9f7163; 
+}
+
+.products {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 200px;
+    flex-wrap: wrap;
+}
+
+.product-item {
+    width: 250px;
+    text-align: center;
+    margin-bottom: 30px; /* Add some space between items for better mobile layout */
+}
+
+
+.product-item img {
+    width: 100%;
+    height: 450px; 
+    object-fit: cover;
+}
+
+.product-item p {
+    font-size: 1.3rem;
+    color: #9f7163;
+    margin-top: 10px;
+    font-weight: bold;
+    text-align: left;
+}
+
+.browse-btn {
+    font-family: 'ProximaNovaRegular', Arial, sans-serif;
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: #9f7163;
+    color: white;
+    margin: 40px 10px; 
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.browse-btn:hover {
+    font-family: 'ProximaNovaRegular', Arial, sans-serif;
+    background-color: #b47878; 
+}
+
+/* Behind the Seams Section */
+.behind {
+    /* background-color: #f7e4e4; */
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1500px;
+    margin: 0 auto;
+}
+
+.behind-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.behind img {
+    width: 50%;
+    height: auto;
+    object-fit: cover;
+}
+
+
+.behind-text {
+    max-width: 45%;
+    margin-left: 5%;
+    font-size: 1.3rem;
+    text-align: center;
+    
+}
+.behind-text p{
+font-family: 'ProximaNovaLight', Arial, sans-serif;
+}
+
+.behind-text p:last-of-type {
+    margin-top: 20px; 
+}
+
+
+.behind-title {
+    padding: 95px 0px 35px;
+}
+
+/* Footer */
+footer {
+    padding: 0;
+    /* background-color: #613030; */
+    color: #9f7163;
+    font-family: 'ProximaNovaRegular', Arial, sans-serif;
+    font-size: 14px;
+    line-height: 2;
+    border-bottom: 70px solid #cdb5a2; /*  top-bar  */
+}
+
+/* About Us section */
+.about-us-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 20px 10%;
+    position: relative;
+}
+
+.about-us-left {
+    display: block;
+}
+
+.about-us-links {
+    display: block;
+}
+
+.about-us-links h4 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.underline {
+    width: 200px;
+    height: 2px;
+    background-color: #9f7163;
+    margin-bottom: 10px;
+}
+
+.about-us-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns */
+    gap: 50px;
+}
+
+.about-us-columns ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.about-us-columns a {
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Social Media Section */
+.about-us-socials {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+    margin-top: auto; /* Pushes the section to the bottom */
+    position: absolute;
+    right: 10%;
+    bottom: 20px; 
+}
+
+
+.social-icon {
+    width: 35px;
+    height: 35px;
+}
+
+.logo-icon {
+    width: 35px;
+    height: 50px;
+}
+
+/* Footer Bottom Text */
+.footer-container {
+    font-family: 'ProximaNovaRegular', Arial, sans-serif;
+    background-color: #bb8888;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 10%;
+}
+
+.footer-left, .footer-right {
+    color: white;
+    font-size: 1.3rem;
+}
+
+.footer-right {
+    text-align: right;
+    
+}
+
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+    .about-us-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us-left {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .about-us-socials {
+        position: static;
+        margin-top: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+}
+
+
+
+/* Responsive media queries */
+@media screen and (max-width: 768px) {
+    .about-us-footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-us-links, .about-us-links-right {
+        margin-bottom: 20px;
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        text-align: center;
+    }
+
+    
+}
+
+
+@media screen and (max-width: 768px) {
+    .hero {
+        flex-direction: column;
+    }
+
+    .hero-left, .hero-right {
+        width: 100%;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .behind {
+        padding: 20px;
+    }
+
+    .behind-content {
+        flex-direction: column; 
+        align-items: center; 
+        gap: 20px;
+    }
+
+    .behind img {
+        width: 100%; 
+        height: auto; 
+    }
+
+    .behind-text {
+        max-width: 100%; 
+        margin-top: 20px;
+        font-size: 1.1rem; 
+        text-align: center;
+        padding: 10px 20px; 
+    }
+
+    .behind-title {
+        padding: 50px 0 20px; 
+    }
+
+    .footer-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-right {
+        margin-top: 10px;
+    }
+}
+
