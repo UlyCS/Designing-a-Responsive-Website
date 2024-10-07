@@ -242,7 +242,7 @@ nav ul {
 
 .product-item {
     width: 155.52px;
-    margin-bottom: 10px; /* Add some space between items for better mobile layout */
+    margin-bottom: 10px; 
 }
 
 
@@ -592,10 +592,10 @@ footer {
     }
 
     .behind {
-        flex-direction: row; /* Keep the image and text side by side */
+        flex-direction: row; 
         max-width: 1000px;
         margin: 0 auto;
-        align-items: flex-start; /* Align image and text to the top */
+        align-items: flex-start; 
     }
 
     .products {
@@ -610,7 +610,7 @@ footer {
     }
 
     .about-us-socials {
-        justify-content: flex-end; /* Align social icons to the right */
+        justify-content: flex-end; 
     }
 
     .footer-container {
